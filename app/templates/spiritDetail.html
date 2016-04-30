@@ -1,0 +1,19 @@
+<ion-view>
+    <div class="bar bar-heade bar-header-style">
+        <div class="row">
+            <div class="col-20">
+                <button class="button button-clear icon ion-ios-arrow-left" ng-click="goBack()"></button>
+            </div>
+            <div class="col-80 button-bar">
+                <button class="button  button-clear {{spiritPage=='spiritInfo'?'top-button-color':''}}" ng-click="goSpiritPage('spiritInfo')">商品</button>
+                <button class="button button-clear {{spiritPage=='spiritInfoDetail'?'top-button-color':''}}" ng-click="goSpiritPage('spiritInfoDetail')">详情</button>
+                <button class="button button-clear {{spiritPage=='spiritParams'?'top-button-color':''}}" ng-click="goSpiritPage('spiritParams')">参数</button>
+            </div>
+        </div>
+
+    </div>
+       <ion-nav-view name="spiritPageView"></ion-nav-view>
+    <ion-footer-bar class="detail-footer-style">
+        <button class="button button-full button-style button-footer-style" ng-click="purchase()">立即购买</button>
+    </ion-footer-bar>
+</ion-view>

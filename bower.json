@@ -1,0 +1,16 @@
+{
+  "name": "FSGW",
+  "author": "kyee <zhangshaohui@kyee.com.cn>",
+  "private": "true",
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#~1.0.0",
+    "angular": "#1.3.16"
+  },
+  "dependencies": {
+    "ngCordova": "~v0.1.17-alpha",
+    "angular-resource": "~1.4.2",
+    "lodash": "~3.9.0",
+    "ionic-toast": "~0.1.1"
+  }
+}
+

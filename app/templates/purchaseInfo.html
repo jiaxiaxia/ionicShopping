@@ -1,0 +1,73 @@
+<ion-view view-title="确认订单">
+    <ion-nav-bar align-title="center">
+    </ion-nav-bar>
+    <ion-nav-buttons>
+        <button class="button button-clear icon ion-ios-arrow-left" ng-click="goBack()"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <ion-list class="purchase-list-style">
+            <a class="item item-borderless" >
+                <div class="row" >
+                    <div class="col" >收货人：{{loginUser.username}}</div>
+                    <div class="col" >{{loginUser.telephone}}</div>
+                </div>
+                <div class="row">
+                    <div class="col"><span class="item-font-middle-size" >收货地址：{{loginUser.address}}</span></div>
+                </div>
+            </a>
+            <ion-item class="item-divider item-text-wrap  item-borderless">
+                <div class="row row-top-style">
+                    <div class="col-25 " >
+                        <img class="img-purchase" ng-src="{{shangpingInfo.photoPath}}"/>
+                    </div>
+                    <div class="col-50" ng-model="shangpingInfo">{{shangpingInfo.maoshu}}</div>
+                    <div class="col-20 text-right">
+                        <h2 class="assertive" ng-model="shangpingInfo">{{shangpingInfo.price | currency:" ￥ "}}</h2>
+                        <h3>x {{purchaseInfo.purchaseNum}}</h3>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item>
+                <div class="row">
+                    <div class="col-33">购买数量</div>
+                    <div class="col-67 text-right">
+                        <button class="button button-small" ng-click="subNum()">－</button>
+                        <input type="text" ng-model="purchaseInfo.purchaseNum" ng-init="purchaseInfo.purchaseNum=1" class="input-num"/>
+                        <button class="button button-small" ng-click="addNum()">＋</button>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item>
+                <div class="row">
+                    <div class="col-33">配送方式</div>
+                    <div class="col-67 text-right">
+                        快递&nbsp; 免邮
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item>
+                <div class="row">
+                    <div class="col text-right">
+                        <span class="font-size-small">共{{purchaseInfo.purchaseNum}}件商品，</span>
+                        合计：<span class="assertive">¥{{purchaseInfo.totalprice}}</span>
+                    </div>
+
+                </div>
+            </ion-item>
+        </ion-list>
+        <ion-list>
+            <ion-item class="item item-divider">选择支付方式</ion-item>
+                <ion-radio ng-model="purcharType" ng-value="3">余额支付</ion-radio>
+                <ion-radio ng-model="purcharType" ng-checked="true" ng-value="1">银联支付</ion-radio>
+                <ion-radio ng-model="purcharType" ng-value="2">支付宝支付</ion-radio>
+
+        </ion-list>
+    </ion-content>
+    <ion-footer-bar class="pur-footer">
+        <div class="pur-footer-style">
+        <span class="font-size-small">共<span class="assertive">{{purchaseInfo.purchaseNum}}</span>件，</span>
+         总金额&nbsp;<span class="price-style">{{ purchaseInfo.totalprice |currency:" ￥ " }}</span>
+        <button class="button button-assertive" ng-click="submitRecord()" ng-disabled="clicked">提交订单</button>
+        </div>
+    </ion-footer-bar>
+</ion-view>

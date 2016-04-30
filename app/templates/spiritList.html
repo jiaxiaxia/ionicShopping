@@ -1,0 +1,54 @@
+<ion-view>
+
+    <div class="bar bar-header item-input-inset">
+
+        <label class="item-input-wrapper">
+            <i class="icon ion-ios-search placeholder-icon"></i>
+            <input type="search" placeholder="Search">
+        </label>
+        <button class="button button-clear">
+            筛选
+        </button>
+    </div>
+    <ion-content class="has-header">
+        <div class="button-bar">
+            <button class="button button-clear {{orderFlag=='overAll'?'top-button-color':''}}" ng-click="orderBy('overAll')">综合</button>
+            <button class="button button-clear {{orderFlag=='sales'?'top-button-color':''}}" ng-click="orderBy('sales')">销量</button>
+            <button class="button button-clear {{orderFlag=='price'?'top-button-color':''}}" ng-click="orderBy('price')">价格</button>
+        </div>
+        <div class="list">
+            <a class="item item-thumbnail-left list-item-style" ng-href="#/spiritDetail/spiritInfo">
+                <img class="list-img" src="images/jinbuhuan_01.jpg">
+                <p class="font-top-style">53度金不换天生富贵30原浆1000ml浓香型白酒&nbsp;安微名酒</p>
+                <p class="font-small-style">月销&nbsp;29笔</p>
+                <p class=" font-red">¥249<span class="font-bottom-color">运费¥10</span></p>
+            </a>
+
+            <a class="item item-thumbnail-left list-item-style" href="#">
+                <img class="list-img" src="images/jinbuhuan_02.jpg">
+                <p class="font-top-style">52度金不换盛世国藏1000ml 浓香型白酒 安徽名酒</p>
+                <p class="font-small-style">月销&nbsp;10笔</p>
+                <p class=" font-red">¥109<span class="font-bottom-color">免运费</span></p>
+            </a>
+            <a class="item item-thumbnail-left list-item-style" href="#">
+                <img class="list-img" src="images/gujinggognjiu_02.jpg">
+                <p class="font-top-style">古井贡酒 年份原浆 古850度 425ml 浓香型 白酒</p>
+                <p class="font-small-style">月销&nbsp;2笔</p>
+                <p class="font-red">¥289<span class="font-bottom-color">运费¥10</span></p>
+            </a>
+            <a class="item item-thumbnail-left list-item-style" href="#">
+                <img class="list-img" src="images/jinbuhuan_03.jpg">
+                <p class="font-top-style">52度金不换明窖秘酿1111ml浓香型白酒安徽地方名酒双瓶套装</p>
+                <p class="font-small-style">月销&nbsp;0笔</p>
+                <p class=" font-red">¥129<span class="font-bottom-color">运费¥12</span></p>
+            </a>
+            <a class="item item-thumbnail-left list-item-style" href="#">
+                <img class="list-img" src="images/gujinggognjiu_01.jpg">
+                <p class="font-top-style">古井贡酒 古8年份原浆白酒50度425ml*2瓶 纯粮食酒 送礼酒</p>
+                <p class="font-small-style">月销&nbsp;12笔</p>
+                <p class=" font-red">¥769<span class="font-bottom-color">免运费</span></p>
+            </a>
+
+        </div>
+    </ion-content>
+</ion-view>

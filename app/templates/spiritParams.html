@@ -1,0 +1,14 @@
+<ion-view>
+    <ion-content class="has-header">
+        <ion-list>
+            <ion-item>产品参数</ion-item>
+            <ion-item class="item-divider item-text-wrap" ng-repeat="spiritParma in spiritParmas">
+                <div class="row">
+                    <div class="col-33">{{spiritParma.paramName}}</div>
+                    <div class="col-67">{{spiritParma.paramValue}}</div>
+                </div>
+            </ion-item>
+
+        </ion-list>
+    </ion-content>
+</ion-view>
